@@ -1,0 +1,13 @@
+<mvc:View controllerName="fiorilocaltest.controller.App"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <App id="App">
+        <pages>
+            <Page id="page" title="{i18n>title}">
+                <content>
+                    <Button text="HTTP Method Test" press="onPress"/>
+                </content>
+            </Page>
+        </pages>
+    </App>    
+</mvc:View>

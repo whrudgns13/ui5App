@@ -1,0 +1,40 @@
+<mvc:View 
+    controllerName="control.extension.controller.App"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"
+    xmlns:my ="control.extension.control"
+    >
+    <App id="app">
+        <pages>
+            <Page id="page" title="{i18n>title}">
+                <content>
+                        <!-- <Panel width="100%" headerText="Extension">
+                            <content>                               
+                                <my:MyPanel>
+                                    <my:content>
+                                        <my:MyControl text="1234" value="5522" btnText="Hello" press="onPress" />                                        
+                                    </my:content>
+                                 </my:MyPanel>
+                            </content>
+                        </Panel>
+                        <my:MyControl2 class="sapUiSmallMargin">
+                                <my:MyControl text="MyControl" value="UI5 Custom Control" btnText="HelloWorld" />
+                        </my:MyControl2> -->
+                        <my:MyFlexBox alignItems="center" width="500px" justifyContent="space-between">
+                            <my:items>
+                                <Button text="first"/>
+                                <Button text="last"/>
+                            </my:items>
+                        </my:MyFlexBox>
+                        <FlexBox alignItems="Center" justifyContent="Center">
+                            <items>
+                                <Button text="!"/>
+                                <Button text="2"/>
+                            </items>
+                        </FlexBox>
+                </content>
+            </Page>
+        </pages>
+    </App>
+    
+</mvc:View>

@@ -1,0 +1,44 @@
+<mvc:View xmlns:f="sap.f" controllerName="todolisttable.controller.App"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <App id="app">
+        <Page id="page" title="{i18n>title}">
+            <content>
+                <f:Card width="500px" height="auto" class="sapUiSmallMargin">
+                    <f:content>
+                    <List 
+                        mode="Delete"
+                        delete="toDoDelete"
+                        items="{toDos>/list}" 
+                        noDataText="데이터가 없습니다."
+                    >
+                    <headerToolbar>
+                        <OverflowToolbar >
+                            <Text text="To Do List"/>
+                            <ToolbarSpacer/>
+                            <Button icon="sap-icon://add" press="onOpenDialog"/>
+                        </OverflowToolbar>
+                    </headerToolbar>
+                        <items>
+                            <CustomListItem>
+                                <HBox class="sapUiSmallMargin" alignItems="Center" justifyContent="SpaceBetween">
+                                    <Text text= "{toDos>title}"/>
+                                    <HBox  alignItems="Center">
+                                        <Text text="{path : 'todoDialog>/date', formatter : '.formatter.getDate'} 
+                                            {path : 'toDos>time',formatter : '.formatter.getTime'}"/>
+                                        <Switch state="{toDos>state}"/>
+                                    </HBox>
+                                </HBox>
+                            </CustomListItem>
+                            <!-- <ObjectListItem title="{toDos>title}" 
+                                number="{path : 'todoDialog>/date', formatter : '.formatter.getDate'} 
+                                        {path : 'toDos>time',formatter : '.formatter.getTime'}"/> -->
+                        </items>
+                    </List>
+                    </f:content>
+                </f:Card>
+               
+            </content>
+        </Page>
+    </App>    
+</mvc:View>

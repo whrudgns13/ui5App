@@ -1,0 +1,22 @@
+{
+  "xsappname": "FioriDemo",
+  "tenant-mode": "dedicated",
+  "description": "Security profile of called application",
+  "scopes": [
+    {
+      "name" : "uaa.user",
+      "description" : "UAA"
+    },
+    {
+      "name" : "$XSAPPNAME.Display",
+      "description" : "UAA Display"
+    }
+  ],
+  "role-templates": [{
+    "name" : "POC_EMP_Role",
+    "description" :"UAA POC_EMP_Role",
+    "scope-references" : [
+      "$XSAPPNAME.Display"
+    ]
+  }]
+}

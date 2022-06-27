@@ -1,0 +1,28 @@
+<mvc:View xmlns:f="sap.f" 
+    controllerName="todolist.controller.App"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <App id="app">
+        <pages>
+            <Page id="page" title="{i18n>title}">
+                <headerContent>
+                    <Text text="{date>/toDay}"/>
+                    <Button icon="sap-icon://add" press="onOpenTodoDoalog"/>
+                    <Button icon="sap-icon://delete"/>
+                </headerContent>
+                <content>
+                    <f:GridContainer id="gridContainer" class="sapUiSmallMargin">
+                        <f:layout>
+                            <f:GridContainerSettings rowSize="300px" columnSize="200px" gap="20px"/>
+                        </f:layout>
+                    </f:GridContainer>
+                    <List headerText="To Do List">
+                        <items>
+                            <ObjectListItem title="{}" number=""></ObjectListItem>
+                        </items>
+                    </List>
+                </content>
+            </Page>
+        </pages>
+    </App>
+</mvc:View>
